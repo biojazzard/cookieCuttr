@@ -1,20 +1,27 @@
-CookieCuttr
-===========
+# CookieCuttr | js-cookie version
 
-A tailorable jQuery plugin to deal with the EU Cookie Law.
+modified by [Alfredo Llanos](@biojazzard)
 
-**We're not accepting any more pull requests, someone else is working on a new version at the moment, when its ready, we'll link it here.**
+CookieCuttr was based on jquery-cookie, now this project has become js-cookie.
+So cookiecuttr has heen updated to work with it.
 
-Dependencies
-------------
+### Dependencies
 
 * [jQuery](https://github.com/jquery/jquery)
-* [jQuery.cookie](https://github.com/carhartl/jquery-cookie)
 
-Useage
-------
+IMPORTANT CHANGE:
 
-Add `jquery.cookiecuttr.js`, after jQuery and jQuery.cookie, and `cookiecuttr.css` to the head of your HTML document. Then call CookieCuttr on document ready.
+* [js-cookie](https://github.com/js-cookie/js-cookie)
+
+OR
+
+```
+bower install js-cookie
+```
+
+### Useage
+
+Add `jquery.cookiecuttr.js`, after jQuery and js-cookie, and `cookiecuttr.css` to the head of your HTML document. Then call CookieCuttr on document ready.
 
 ```javascript
 $(document).ready(function () {
@@ -30,11 +37,11 @@ if (jQuery.cookie('cc_cookie_accept') == "cc_cookie_accept") {
 }
 ```
 
-Example with Google Analytics
------------------------------
+### Example with Google Analytics
+
 
 ```javascript
-if (jQuery.cookie('cc_cookie_accept') == "cc_cookie_accept") {
+if (Cookies.get('cc_cookie_decline') == "cc_cookie_decline") {
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
   _gaq.push(['_trackPageview']);
@@ -50,7 +57,7 @@ if (jQuery.cookie('cc_cookie_accept') == "cc_cookie_accept") {
 Alternatively, you can do the following until cookies are declined.
 
 ```javascript
-if (jQuery.cookie('cc_cookie_decline') == "cc_cookie_decline") {
+if (Cookies.get('cc_cookie_decline') == "cc_cookie_decline") {
   // do nothing
 } else {
   var _gaq = _gaq || [];
@@ -72,6 +79,13 @@ if( $.cookieAccepted() ) {
   // insert the code you do not want to run UNTIL cookies are accepted here
 }
 ```
+
+CookieCuttr
+-----------
+
+A tailorable jQuery plugin to deal with the EU Cookie Law.
+
+**We're not accepting any more pull requests, someone else is working on a new version at the moment, when its ready, we'll link it here.**
 
 Read More About EU Cookie Law
 -----------------------------
