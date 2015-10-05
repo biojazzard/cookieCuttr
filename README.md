@@ -32,7 +32,7 @@ $(document).ready(function () {
 For any JavaScript you want to disable, you need to wrap the following if statement around it.
 
 ```javascript
-if (jQuery.cookie('cc_cookie_accept') == "cc_cookie_accept") {
+if (Cookies.get('cc_cookie_accept') == "cc_cookie_accept") {
   // insert the code you do not want to run UNTIL cookies are accepted here
 }
 ```
